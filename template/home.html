@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+<title>Home</title>
+<link rel="shortcut icon" href="{{url_for('static',filename='img/home2.jpg')}}"/>
+<!-- CSS -->
+
+</head>
+    <style>
+     
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 108px;
+      padding: 16px;
+      bottom: 10px;
+    }
+    .nitheesh{
+      position:absolute;
+      bottom:160px;
+      left:40px;
+      font-size:40px;
+    }
+    
+    </style>
+
+<body style="background-color:white;">
+
+  <marquee><h3 style="color:black">We Care For Your Health Every Moment</h3></marquee><br>
+  <img src="static/img/health_back.jpg" alt="img" width="1350" height="650" align="right";">
+  <marquee><h3 style="color:red">Caring For Better Life</h3></marquee><br>
+    <img src="static/img/h1.jpg" alt="img" width="450" height="390"align="left"; style="float:left; margin-right:10px; margin-bottom:5px; margin-left:45px; border:solid yellow 1px; padding:2px"> <br><br><br>
+    <center><h1 style="color:black"><b>Health is Wealth</b></h1></center><br><br>
+  <h4 style="color:black">	"Machine learning is actually advancing the health care industry by implementing
+    cognitive technology in order to unwind a huge amount of medical records and also in order to perform any power diagnosis."
+     <br><br></h4>
+     <br><br><br><br><br><br><br><br>
+     <img src="static/img/home2.jpg" alt="img" width="450" height="390"; style="float:right; margin-right:10px; margin-bottom:5px; margin-right:45px; border:solid yellow 1px; padding:2px"> <br><br><br>
+    <h4 style="color:black">&nbsp&nbsp&nbsp&nbsp&nbsp 	"A Disease prediction system is an important 
+      <br>&nbsp&nbsp&nbsp&nbsp&nbsp aspect of a developing nation as part of strong 
+      <br>&nbsp&nbsp&nbsp&nbsp&nbsp healthcare infrastructure."
+      <br>
+      <br>&nbsp&nbsp&nbsp&nbsp&nbsp 	With this notion , this app proposes a machine learning 
+      <br>&nbsp&nbsp&nbsp&nbsp&nbsp equipped web-based disease prediction system </h4><br><br>
+      <marquee><h3 style="color:red">Making Health Care Better Together</h3></marquee><br>
+      <center><video width="1000" height="500" controls>
+        <source src="static/videos/This AI Is Beating Doctors At Their Own Game.mp4" type="video/mp4">
+
+    </video>
+    </center>
+
+      
+  
+  <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-yellow fixed-top" style="background-color:green;">
+    <div class="container">
+
+     
+<img src="static/img/logo.png" width="80" height="70">
+  <a class="navbar-brand mr-4" href="/"> &nbsp&nbsp&nbsp KNOW YOUR HEALTH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/cancer">Cancer</a>
+          <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/liver">Liver</a>
+          <a class="nav-item nav-link" href="/kidney">Kidney</a>
+           <a class="nav-item nav-link" href="/Malaria">Malaria</a>
+           <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+           <a class="nav-item nav-link" href="/disindex">Overview</a>
+           <a class="nav-item nav-link" href="/login">Login</a>
+
+        </div>
+        <!-- Navbar Right Side 
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <div class= "container">
+
+     <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+<div class="nitheesh">
+    <h1 style="color:black">We Believe Everyone Should Have <br> Easy Acess To Great Health-Care</h1>
+    <h6 style="color:black" >-Making Healthcare Better Together</h6>
+</div>
+
+
+
+
+
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+  
+    
+<footer id="main-footer">
+    <h3 style="color:white">KNOW YOUR HEALTH</h3>
+    <p>An application for predicting different organ diseases using machine & deep learning algorithms..!</p>
+     Designed <span>by  Nitheesh & Sai Pramod</span><br>
+     Contact-Us :7780207048 & 6309878087<br><br>
+     Project Guide : Premalatha.G(Associate profesior-PEC)<br><br>
+     Copyright &copy; 2022
+     <br>
+    
+      
+    </footer>
+</body>
+</html>

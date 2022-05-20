@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>kidney_Prediction</title>
+  <link rel="shortcut icon" href="{{url_for('static',filename='img/home2.jpg')}}"/>
+    
+</head>
+	<style>
+    img{
+      display:block;
+      margin-left:auto;
+      margin-right: auto;
+    }
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 1px;
+      padding: 16px;
+      bottom: 8px;
+    }</style>
+	
+  <body style="background-color:white;">
+
+  
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <img src="static/img/logo.png" width="80" height="70">
+          <a class="navbar-brand mr-4" href="/"> &nbsp&nbsp&nbsp KNOW YOUR HEALTH</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="/">Home</a>
+              <a class="nav-item nav-link" href="/about">About</a>
+              <a class="nav-item nav-link" href="/cancer">Cancer</a>
+              <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+              <a class="nav-item nav-link" href="/heart">Heart</a>
+              <a class="nav-item nav-link" href="/liver">Liver</a>
+              <a class="nav-item nav-link" href="/kidney">Kidney</a>
+               <a class="nav-item nav-link" href="/Malaria">Malaria</a>
+               <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+               <a class="nav-item nav-link" href="/disindex">Overview</a>
+            </div>
+            <!-- Navbar Right Side
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="/login">Login</a>
+              <a class="nav-item nav-link" href="/register">Register</a>
+            </div>-->
+          </div>
+        </div>
+      </nav>
+    </header>
+<div class="container",class="form-group">
+        
+    <h1 style="color:black">Welcome to kidney prediction</h1>
+    <h2 style="color:black(14, 14, 199)">Know your chance of getting kidney disease..!</h2>
+
+    <h3>Enter the Following parameters :</h3>
+  <form action="/predictkidney" method="POST">
+    <label for="age" style="color:black">Age : </label>
+    <input type="text" id="age" name="age">
+    <br>
+    <img src="static/kidney.gif" alt="img" width="600" height="450" align="right"; style="border-radius:60%;">
+
+    <label for="bp" style="color:black">B.P : </label>
+    <input type="text" id="bp" name="bp">
+    <br>
+
+
+    <label for="al" style="color:black">A.L : </label>
+    <input type="text" id="al" name="al">
+    <br>
+    
+
+    <label for="pcc" style="color:black">P.C.C : </label>
+    <input type="text" id="pcc" name="pcc">
+    <br>
+
+    <label for="bgr" style="color:black">B.G.R: </label>
+    <input type="text" id="bgr" name="bgr">
+    <br>
+
+    
+
+    <label for="bu" style="color:black">B.U : </label>
+    <input type="text" id="bu" name="bu">
+    <br>
+
+    <label for="sc" style="color:black">S.C : </label>
+    <input type="text" id="sc" name="sc">
+    <br>
+
+
+    <label for="hemo" style="color:black">HEMO : </label>
+    <input type="text" id="hemo" name="hemo">
+    <br>
+
+    <label for="pcv" style="color:black">PCV : </label>
+    <input type="text" id="pcv" name="pcv">
+    <br>
+
+    <label for="htn" style="color:black">HTN: </label>
+    <input type="text" id="htn" name="htn">
+    <br>
+
+    <label for="dm" style="color:black">D.M : </label>
+    <input type="text" id="dm" name="dm">
+    <br>
+
+    <label for="appet" style="color:black">Appet: </label>
+    <input type="text" id="appet" name="appet">
+    <br>
+    <br>
+
+    <input type="submit" value="Submit" style="color:red"><br><br>
+</form>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<footer id="main-footer">
+    <h3 style="color:white">KNOW YOUR HEALTH</h3>
+    <p>An application for predicting different organ diseases using machine & deep learning algorithms..!</p>
+     Designed <span>by  Nitheesh & Sai Pramod</span><br>
+     Contact-Us :7780207048 & 6309878087<br><br>
+     Project Guide : Premalatha.G(Associate profesior-PEC)<br><br>
+     Copyright &copy; 2022
+     <br>
+    </footer>
+</body>
+</html>
