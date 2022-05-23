@@ -32,12 +32,6 @@ y=cancer[["Malignant/Benign"]]
 X=cancer.drop(["Malignant/Benign"],axis="columns")
 print(X.shape[1]) 
 
-# Label encoding for handling categorical values
-le=LabelEncoder()
-for i in list(df.columns):
-    if df[i].dtype=='object':
-        df[i]=le.fit_transform(df[i])
-
 
 # Normalization
 scaler = StandardScaler()
