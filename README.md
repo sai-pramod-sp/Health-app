@@ -42,6 +42,9 @@
 <hr>
  <h3> For using the project clone the repository and type the following commands in the termial: </h3>
  <ul>
+ <li> $ conda create -n web python=3.7</li>
+ <li> $ conda activate web</li>
+ <li> $ pip install -r requirements.txt</li>
   <li> $ set FLASK_APP= app.py</li>
   <li> $ flask run</li>
   </ul>
