@@ -40,7 +40,7 @@
 </ul>
 
 <hr>
- <h3> For using the project clone the repository and type the following commands in the termial: </h3>
+ <h3> For using the project clone the repository and type the following commands in the command prompt: </h3>
  <ul>
  <li> $ conda create -n web python=3.7</li>
  <li> $ conda activate web</li>
